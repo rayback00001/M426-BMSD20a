@@ -15,23 +15,6 @@ Bitte gehen sie strikt nach TDD-Regeln vor.
 3.	Schreibe nicht mehr Produktivcode, als nötig ist, um den Test zum Durchlaufen zu bringen.
 
 
-# Test-driven Development in C#
-
-Bitte lösen sie die Aufgabe mit ihrem persönlichen Fork.
-Halten Sie Ihre Änderungen mit Git fest
-(`git add`, `git commit`) und übertragen Sie diese auf den zentralen Git-Server
-(`git push`).
-
-**Der Zustand Ihres persönlichen Repositories dient zur Überprüfung Ihrer
-Hausaufgaben und kann zur Benotung herangezogen werden!**  
-
-Bitte gehen sie strikt nach TDD-Regeln vor.
-
-1.	Schreibe keinen Produktivcode, bis es einen Test gibt, der aufgrund dieses fehlenden produktiven Codes scheitert.
-2.	Schreibe nicht mehr Testcode, als nötig ist, um den Test zum Scheitern zu bringen ‒ und ein Kompilierfehler gilt als Scheitern.
-3.	Schreibe nicht mehr Produktivcode, als nötig ist, um den Test zum Durchlaufen zu bringen.
-
-
 ## Aufgabe 
 
 ### FooBarQix
