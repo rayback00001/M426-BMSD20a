@@ -13,5 +13,15 @@ namespace Calculator
         {
             return minuend - subtrahend;
         }
+
+        public int Divide(int DividentA, int DividentB)
+        {
+            if(D)
+            {
+                throw new ArgumentException();
+            }
+            return DividentA / DividentB;
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Transactions;
 
 namespace Statistics
 {
@@ -17,6 +18,16 @@ namespace Statistics
 
             mean = (double)sum / numbers.Count;
             return mean;
+        }
+
+        public double Median(List<int>numbers)
+        {
+            numbers.Sort();
+
+            if(numbers.Count % 2 == 0)
+            {
+                return (double)(numbers[])
+            }
         }
     }
 }

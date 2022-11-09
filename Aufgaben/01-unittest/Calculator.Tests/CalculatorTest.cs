@@ -36,5 +36,14 @@ namespace Calculator.Tests
             // Then
             Assert.Equal(expected, actual);
         }
+
+        public void TestDevideFourTimesZeroException()
+        {
+            int a = 4;
+            int b = 0;
+            Calculator calculator = new Calculator();
+
+            Assert.Throws(ArgumentException)
+        }
     }
 }
