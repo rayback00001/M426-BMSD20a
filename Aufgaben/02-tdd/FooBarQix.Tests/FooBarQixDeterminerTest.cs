@@ -45,6 +45,36 @@ namespace FooBarQix.Tests
             Assert.Equal("Qix", foobarqix.Determine(number));
         }
 
-       
+        [Theory]
+        [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(60)]
+        public void Determine_TestDivisibleBy3And5_ReturnBar(int number)
+        {
+            var foobarqix = new FooBarQixDeterminer();
+            Assert.Equal("FooBar", foobarqix.Determine(number));
+        }
+
+        [Theory]
+        [InlineData(21)]
+        [InlineData(42)]
+        [InlineData(63)]
+        public void Determine_TestDivisibleBy3And7_ReturnBar(int number)
+        {
+            var foobarqix = new FooBarQixDeterminer();
+            Assert.Equal("FooQix", foobarqix.Determine(number));
+        }
+
+        [Theory]
+        [InlineData(105)]
+        [InlineData(210)]
+        [InlineData(420)]
+        public void Determine_TestDivisibleBy357_ReturnBar(int number)
+        {
+            var foobarqix = new FooBarQixDeterminer();
+            Assert.Equal("FooBarQix", foobarqix.Determine(number));
+        }
+
+
     }
 }
