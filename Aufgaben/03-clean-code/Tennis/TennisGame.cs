@@ -14,8 +14,7 @@ namespace Tennis
         private string player1Name;
         private string player2Name;
 
-        public TennisGameManager(string player1Name, 
-            string player2Name)
+        public TennisGameManager(string player1Name, string player2Name)
         {
             this.player1Name = player1Name;
             p1point = 0;
@@ -26,12 +25,14 @@ namespace Tennis
         {
             var s = "";
             // when both have same points and game smaller than three
-            if (p1point == p2point && p1point < 3){
+            if (p1point == p2point && p1point < 3)
+            {
                 if (p1point == 0)
                     s = "Love";
                 if (p1point == 1)
                 {
-                    s = "Fifteen";}
+                    s = "Fifteen";
+                }
                 if (p1point == 2)
                     s = "Thirty";
                 // do we need this?
@@ -71,7 +72,8 @@ namespace Tennis
                 p1res = "Love";
                 s = p1res + "-" + p2res;
             }
-            if (p1point > p2point && p1point < 4){
+            if (p1point > p2point && p1point < 4)
+            {
                 if (p1point == 2)
                     p1res = "Thirty";
                 if (p1point == 3)
@@ -80,17 +82,18 @@ namespace Tennis
                     p2res = "Fifteen";
                 if (p2point == 2)
                     p2res = "Thirty";
-                s = p1res + "-" + p2res;}
+                s = p1res + "-" + p2res;
+            }
 
 
 
             if (p2point > p1point && p2point < 4)
             {
-                if (p2point ==   2)
+                if (p2point == 2)
                     p2res = "Thirty";
                 if (p2point == 3)
                     p2res = "Forty";
-                if (p1point == 1 )
+                if (p1point == 1)
                     p1res = "Fifteen";
                 if (p1point == 2)
                     p1res = "Thirty";
@@ -116,31 +119,31 @@ namespace Tennis
         }
 
         // This is the old implemenation: we may can it use later.
-        //private string GetResultOld(int tempScore, int m_score1, int m_score2)
-        //{
-        //    var score = "";
-        //    for (var i = 1; i < 3; i++)
-        //    {
-        //        if (i == 1) tempScore = m_score1;
-        //        else { score += "-"; tempScore = m_score2; }
-        //        switch (tempScore)
-        //        {
-        //            case 0:
-        //                score += "Love";
-        //                break;
-        //            case 1:
-        //                score += "Fifteen";
-        //                break;
-        //            case 2:
-        //                score += "Thirty";
-        //                break;
-        //            case 3:
-        //                score += "Forty";
-        //                break;
-        //        }
-        //    }
-        //    return "error";
-        //}
+     /*   private string GetResultOld(int tempScore, int m_score1, int m_score2)
+        {
+            var score = "";
+            for (var i = 1; i < 3; i++)
+            {
+                if (i == 1) tempScore = m_score1;
+                else { score += "-"; tempScore = m_score2; }
+                switch (tempScore)
+                {
+                    case 0:
+                        score += "Love";
+                        break;
+                    case 1:
+                        score += "Fifteen";
+                        break;
+                    case 2:
+                        score += "Thirty";
+                        break;
+                    case 3:
+                        score += "Forty";
+                        break;
+                }
+            }
+            return "error";
+        }*/
 
         private static string generate_Player_2_Name()
         {
@@ -153,7 +156,7 @@ namespace Tennis
             {
                 return "Win for player2";
             }
-            return s; 
+            return s;
         }
 
         public void SetPlayer1Score(int number)
@@ -180,12 +183,16 @@ namespace Tennis
 
         public void WonPoint(string tennisPlayer)
         {
-            if (tennisPlayer == "player1"){
-                P1Score();}
+            if (tennisPlayer == "player1")
+            {
+                P1Score();
+            }
             else
                 SecondPlayerScore();
         }
 
     }
 }
+
+
 
